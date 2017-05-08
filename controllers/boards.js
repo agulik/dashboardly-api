@@ -6,6 +6,10 @@ module.exports = (dataLoader) => {
   const boardsController = express.Router();
 
   // Retrieve a list of boards
+
+  // the dataLoader.getAllBoards method is called dataLoader because thats the name of the
+  // connection to the database on the index.js file
+
   boardsController.get('/', (req, res) => {
     dataLoader.getAllBoards({
       page: req.query.page,
